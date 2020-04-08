@@ -43,7 +43,7 @@ public class StrClienthandler extends SimpleChannelInboundHandler<ByteBuf> {
         msg.readBytes(bytes);
         String msgBody = new String(bytes, "UTF-8");
 
-        System.out.println("client");
+        System.out.println("client -> "+ msgBody);
 
     }
 
