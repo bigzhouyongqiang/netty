@@ -33,7 +33,7 @@ public class MychatClient {
 
             // 当客户端输入bye的时候将此客户端和其他服务器断开
             while (!"bye".equals(say) && null != say){
-                channel.writeAndFlush(say+ "\r\n");
+                channel.writeAndFlush(say+ System.lineSeparator());
                 say = br.readLine();
             }
 
