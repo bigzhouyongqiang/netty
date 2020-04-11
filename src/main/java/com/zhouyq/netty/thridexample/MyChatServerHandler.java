@@ -25,10 +25,8 @@ public class MyChatServerHandler extends SimpleChannelInboundHandler<String> {
             if (channel != ch) {
                 /**
                  * bugfix:
-                 * 由于netty的writeAndFlush方法没有类似java的 println方法，
-                 * println方法可以给输出添加一个换行符（\n）,而writeAndFlush方法没有换行符号
-                 * 导致客户端接收到消息后无法显示到控制台，需要客户端敲一下键盘的回车键才能显示出来，
-                 * 所以此处需要添加换行符号 "\n"
+                 *  之前解释过于片面，这个问题是由于DelimiterBasedFrameDecoder 导致的，
+                 *  由于发送的消息没"\n"(根据handler而定)导致netty程序接受数据的时候一直处于等待状态
                  */
                 ch.writeAndFlush( "【" + ch.remoteAddress() + "发送的消息】：" + msg + "\n");
             } else {
