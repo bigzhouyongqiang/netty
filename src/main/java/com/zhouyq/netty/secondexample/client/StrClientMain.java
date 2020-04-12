@@ -1,16 +1,13 @@
-package com.zhouyq.netty.example01.client;
+package com.zhouyq.netty.secondexample.client;
 
 import io.netty.bootstrap.Bootstrap;
-import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import sun.security.pkcs.PKCS7;
 
 import java.net.InetSocketAddress;
-import java.util.Base64;
 
 /**
  * @Description TODO

@@ -1,12 +1,9 @@
-package com.zhouyq.netty.example01.server;
+package com.zhouyq.netty.secondexample.server;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.SimpleChannelInboundHandler;
-import io.netty.util.concurrent.EventExecutorGroup;
 
 import java.time.LocalDateTime;
 

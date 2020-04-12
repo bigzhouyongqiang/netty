@@ -1,4 +1,4 @@
-package com.zhouyq.netty.example01.server;
+package com.zhouyq.netty.secondexample.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;

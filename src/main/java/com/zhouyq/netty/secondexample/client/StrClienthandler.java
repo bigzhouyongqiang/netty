@@ -1,12 +1,9 @@
-package com.zhouyq.netty.example01.client;
+package com.zhouyq.netty.secondexample.client;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import io.netty.util.concurrent.EventExecutorGroup;
-import sun.security.pkcs.PKCS7;
 
 /**
  * @Description TODO
