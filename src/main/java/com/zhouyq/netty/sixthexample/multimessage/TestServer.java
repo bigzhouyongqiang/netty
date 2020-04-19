@@ -1,6 +1,5 @@
-package com.zhouyq.netty.sixthexample;
+package com.zhouyq.netty.sixthexample.multimessage;
 
-import com.zhouyq.netty.fourthexample.MyServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;
@@ -11,9 +10,8 @@ import io.netty.handler.logging.LoggingHandler;
 
 /**
  * @Description
- *  Google protocol buffer 结合netty使用
- *  protocol buffer作用： 序列号和反序列化对象
- *  netty：              数据传输的载体
+ *  解决protocol buffer 集成 netty 多个对象解析和编码的问题
+ *  详细结构查看com/zhouyq/netty/sixthexample/multimessage/MyMessage.proto
  * @Date 2020/4/19 10:53
  * @Author zhouyq
  */

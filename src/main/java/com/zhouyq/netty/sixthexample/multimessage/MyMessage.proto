@@ -1,0 +1,46 @@
+syntax = "proto2";
+
+package com.zhouyq.netty.sixthexample.multimessage;
+
+option java_package = "com.zhouyq.netty.sixthexample.multimessage";
+option java_outer_classname = "MyDataInfo";
+
+// 这种定义方式解决了多种数据对象导致netty 解析、和编码过程出现的难题
+message MyMessage {
+    enum DataType {
+        PerSonType = 1;
+        DogType = 2;
+        CatType = 3;
+    }
+
+    required DataType data_type = 1;
+
+    // 当前MyMessage对象 可以设置这三者其中之一，如果重复设置会把前面设置的清空
+    // 例如：MyMessage message;
+    // message.set_person(person)
+    // mesage.set_dog(dog) // 会清空已经设置的person
+    // 如果还不理解oneof 可以去官网查看，https://developers.google.com/protocol-buffers/docs/proto#oneof
+    oneof dataBody {
+        Person person = 2;
+        Dog dog = 3;
+        Cat cat = 4;
+    }
+}
+
+message Person {
+    optional string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+
+message Dog {
+    optional string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+
+message Cat {
+    optional string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
